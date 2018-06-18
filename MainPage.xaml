@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="MyTeletouch.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyTeletouch.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{StaticResource CommonPagesBackgroundBrush}">
+    <Grid>
+        <local:ConnectControl x:Name="ConnectControl" Visibility="Visible"></local:ConnectControl>
+        <local:MouseControl x:Name="MouseControl" Visibility="Collapsed"></local:MouseControl>
+        <local:KeyboardControl x:Name="KeyboardControl" Visibility="Collapsed"></local:KeyboardControl>
+        <local:JoystickControl x:Name="JoystickControl" Visibility="Collapsed"></local:JoystickControl>
+        <StackPanel x:Name="NavBar" VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Horizontal" Visibility="Collapsed">
+            <Button Name="ButtonMouse" MinHeight="25" Style="{StaticResource NoContentButton}" Click="ButtonMouse_Click" FontFamily="Global User Interface">
+                <Button.Content>
+                    <Image Source="Assets/mouse.png" Width="25" Height="25" Margin="0,0,0,0"></Image>
+                </Button.Content>
+            </Button>
+            <Button Name="ButtonKeyboard" Style="{StaticResource NoContentButton}" Click="ButtonKeyboard_Click" FontFamily="Global User Interface">
+                <Button.Content>
+                    <Image Source="Assets/keyboard.png" Width="25" Height="25" Margin="0,0,0,0"></Image>
+                </Button.Content>
+            </Button>
+            <Button Name="ButtonJoystick" Style="{StaticResource NoContentButton}" Click="ButtonJoystick_Click" FontFamily="Global User Interface">
+                <Button.Content>
+                    <Image Source="Assets/joystick.png" Width="25" Height="25" Margin="0,0,0,0"></Image>
+                </Button.Content>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,78 @@
+﻿<UserControl
+    x:Class="MyTeletouch.Controls.JoystickControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="using:MyTeletouch"
+    mc:Ignorable="d"
+    d:DesignHeight="800"
+    d:DesignWidth="480">
+    <Grid Background="{StaticResource CommonPagesBackgroundBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid x:Name="GridJoystick" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Ellipse Grid.Column="0" Width="200" Height="200" StrokeThickness="3" Stroke="#FFFFFFFF"  Fill="#4FFFFFFF"/>
+            <Ellipse Grid.Column="0" Width="90" Height="90" StrokeThickness="30" Stroke="#FFFFFFFF">
+                <Ellipse.RenderTransform>
+                    <TranslateTransform x:Name="EllipseTrnsform1"></TranslateTransform>
+                </Ellipse.RenderTransform>
+            </Ellipse>
+        </Grid>
+        <Grid x:Name="BigJoystickGrid" Grid.Column="0" 
+              Background="Transparent"
+              PointerPressed="Grid_PointerPressed" 
+              PointerMoved="Grid_PointerMoved" 
+              PointerReleased="Grid_PointerReleased"
+              PointerExited="Grid_PointerReleased"
+              PointerCanceled="Grid_PointerReleased"
+              PointerCaptureLost="Grid_PointerReleased">
+
+        </Grid>
+        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <local:PressedControl Grid.ColumnSpan="3" Width="80" Height="80" Grid.Row="0" DownChanged="PressedControl1_DownChanged">
+                <Grid>
+                    <Ellipse Grid.Column="0" Width="70" Height="70" StrokeThickness="2" Stroke="#FFFFFFFF" Fill="#4FFFFFFF"/>
+                    <Ellipse Grid.Column="0" Width="25" Height="25" StrokeThickness="5" Stroke="#FFE9E70B"/>
+                </Grid>
+            </local:PressedControl>
+            <local:PressedControl Grid.Column="0" Width="80" Height="80" Grid.Row="1" DownChanged="PressedControl2_DownChanged" >
+                <Grid>
+                    <Ellipse Grid.Column="0" Width="70" Height="70" StrokeThickness="2" Stroke="#FFFFFFFF" Fill="#4FFFFFFF"/>
+                    <Ellipse Grid.Column="0" Width="25" Height="25" StrokeThickness="5" Stroke="#FF06C9F3"/>
+                </Grid>
+            </local:PressedControl>
+            <local:PressedControl Grid.Column="2" Width="80" Height="80" Grid.Row="1" DownChanged="PressedControl3_DownChanged" >
+                <Grid>
+                    <Ellipse Grid.Column="0" Width="70" Height="70" StrokeThickness="2" Stroke="#FFFFFFFF" Fill="#4FFFFFFF"/>
+                    <Ellipse Grid.Column="0" Width="25" Height="25" StrokeThickness="5" Stroke="#FFF0590C"/>
+                </Grid>
+            </local:PressedControl>
+            <local:PressedControl Grid.ColumnSpan="3" Width="80" Height="80" Grid.Row="2" DownChanged="PressedControl4_DownChanged" >
+                <Grid>
+                    <Ellipse Grid.Column="0" Width="70" Height="70" StrokeThickness="2" Stroke="#FFFFFFFF" Fill="#4FFFFFFF"/>
+                    <Ellipse Grid.Column="0" Width="25" Height="25" StrokeThickness="5" Stroke="#FF5ED128"/>
+                </Grid>
+            </local:PressedControl>
+            <local:PressedControl Grid.Column="0" Width="80" Height="80" Grid.Row="3" DownChanged="PressedControl5_DownChanged">
+                <Grid>
+                    <Ellipse Grid.Column="0" Width="70" Height="70" StrokeThickness="2" Stroke="#FFFFFFFF" Fill="#4FFFFFFF"/>
+                    <Ellipse Grid.Column="0" Width="25" Height="25" StrokeThickness="5" Stroke="#FFE957F3"/>
+                </Grid>
+            </local:PressedControl>
+        </Grid>
+    </Grid>
+</UserControl>

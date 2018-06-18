@@ -1,0 +1,17 @@
+<Application x:Class="MyTeletouch.App" 
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"	
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"	
+             xmlns:local="using:MyTeletouch" 
+             RequestedTheme="Dark">	
+    <Application.Resources>		
+        <Style x:Key="NoContentButton" TargetType="Button"> 
+            <Setter Property="BorderBrush"  Value="Transparent" />
+        </Style>
+
+        <!--<SolidColorBrush x:Key="PagesBackgroundBrush" Color="Black"/>-->
+        <ImageBrush x:Key="PagesBackgroundBrush" ImageSource="Assets/bg.png"/>
+        <ImageBrush x:Key="GreenPagesBackgroundBrush" ImageSource="Assets/bg2.png"/>
+        <SolidColorBrush x:Key="CommonPagesBackgroundBrush" Color="#FF00BFFF"/>
+
+    </Application.Resources>
+</Application>
